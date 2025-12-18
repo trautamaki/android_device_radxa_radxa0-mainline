@@ -6,7 +6,8 @@
 # Inherit from mainline/common
 TARGET_GRAPHICS := mesa
 TARGET_GRAPHICS_ALLOCATOR_HAL := minigbm
-TARGET_MINIGBM_PLATFORM := gbm_mesa
+# TODO
+TARGET_MINIGBM_PLATFORM := generic
 TARGET_HAS_BATTERY := false
 TARGET_SUPPORTS_SUSPEND := false
 TARGET_SUPPORTS_USB_ACCESSORY_MODE := false
@@ -25,11 +26,11 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Init
 PRODUCT_PACKAGES += \
-    fstab.rpi \
-    fstab.rpi.ramdisk
+    fstab.radxa0 \
+    fstab.radxa0.ramdisk
 
 PRODUCT_PACKAGES += \
-    init.rpi.rc
+    init.radxa0.rc
 
 # Overlays
 PRODUCT_PACKAGES += \

@@ -4,15 +4,15 @@
 //
 
 prebuilt_etc {
-    name: "fstab.rpi",
-    src: "etc/fstab.rpi",
+    name: "fstab.radxa0",
+    src: "etc/fstab.radxa0",
     vendor: true,
     ramdisk_available: true,
 }
 
 prebuilt_etc {
-    name: "init.rpi.rc",
-    src: "etc/init.rpi.rc",
+    name: "init.radxa0.rc",
+    src: "etc/init.radxa0.rc",
     sub_dir: "init/hw",
     vendor: true,
 }

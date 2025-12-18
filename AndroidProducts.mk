@@ -4,9 +4,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_rpi4b.mk
+    $(LOCAL_DIR)/lineage_radxa0_mainline.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_rpi4b-user \
-    lineage_rpi4b-userdebug \
-    lineage_rpi4b-eng
+    lineage_radxa0_mainline-user \
+    lineage_radxa0_mainline-userdebug \
+    lineage_radxa0_mainline-eng

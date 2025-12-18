@@ -7,5 +7,5 @@
 persist.sys.fuse.passthrough.enable=true
 
 # SoC
-ro.soc.manufacturer=Broadcom
-ro.soc.model=BCM2711
+ro.soc.manufacturer=Amlogic
+ro.soc.model=AMLS905Y2

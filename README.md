@@ -1,4 +1,4 @@
-# Android device tree for Raspberry Pi 4 Model B (rpi4b)
+# Android device tree for Radxa Zero (radxa0)
 
 ```
 #

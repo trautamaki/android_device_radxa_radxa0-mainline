@@ -25,7 +25,7 @@ on property:sys.boot_completed=1
     # Foreground should contain most cores (3 is reserved for top-app)
     write /dev/cpuset/foreground/cpus 0-2
 
-    # top-app gets all cpus (including reserved #5)
+    # top-app gets all cpus (including reserved #3)
     write /dev/cpuset/top-app/cpus 0-3
 
     #background contains a small subset (generally one little core)
