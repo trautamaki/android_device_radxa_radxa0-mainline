@@ -30,13 +30,13 @@ BOARD_KERNEL_BASE := 0x01078000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_CMDLINE := video=efifb
 BOARD_KERNEL_CMDLINE += fbcon=map:2
-BOARD_KERNEL_CMDLINE += console=tty0
+BOARD_KERNEL_CMDLINE += console=ttyAML0,115200 no_console_suspend ignore_loglevel
 BOARD_KERNEL_CMDLINE += loop.max_part=7
 BOARD_KERNEL_CMDLINE += androidboot.hardware=amlogic
 BOARD_KERNEL_CMDLINE += androidboot.boot_devices=any # TODO
 BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery
 BOARD_KERNEL_CMDLINE += androidboot.first_stage_console=2
-BOARD_KERNEL_CMDLINE += androidboot.console=tty0
+BOARD_KERNEL_CMDLINE += androidboot.console=ttyAML0
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_OFFSET := 0x00008000
