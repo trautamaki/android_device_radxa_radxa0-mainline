@@ -8,6 +8,7 @@ prebuilt_etc {
     src: "etc/fstab.radxa0",
     vendor: true,
     ramdisk_available: true,
+    vendor_ramdisk_available: true,
 }
 
 prebuilt_etc {

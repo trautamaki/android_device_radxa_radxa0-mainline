@@ -32,9 +32,12 @@ TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_VARIANT := generic
 TARGET_CPU_VARIANT_RUNTIME := cortex-a53
 
+# Bootloader
+TARGET_BOOTLOADER_BOARD_NAME := radxa0
+
 # DTB
 TARGET_DTB_NAME := meson-g12a-radxa-zero
- 
+
 # Temp
 TARGET_SUPPORTS_64_BIT_APPS := true
 
@@ -43,6 +46,7 @@ BOARD_MESA3D_GALLIUM_DRIVERS += v3d,vc4
 
 # Kernel
 BOARD_CUSTOM_DTBIMG_MK := device/radxa/radxa0-mainline/mkdtbimg.mk
+BOARD_CUSTOM_DTBOIMG_MK := device/radxa/radxa0-mainline/mkdtboimg.mk
 BOARD_KERNEL_BASE := 0x01078000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_CMDLINE := video=efifb
@@ -55,6 +59,7 @@ BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery
 BOARD_KERNEL_CMDLINE += androidboot.first_stage_console=2
 BOARD_KERNEL_CMDLINE += androidboot.console=ttyAML0
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE += androidboot.dtbo_idx=0 hdr_policy=1 otg_device=1
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_OFFSET := 0x00008000
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
@@ -62,6 +67,15 @@ BOARD_USES_GENERIC_KERNEL_IMAGE := true
 TARGET_KERNEL_SOURCE := kernel/google/android16-6.12
 TARGET_KERNEL_CONFIG := gki_defconfig
 TARGET_KERNEL_CONFIG_EXT := $(TARGET_KERNEL_SOURCE)/arch/arm64/configs/amlogic_gki.fragment
+
+#TARGET_NO_BOOTLOADER := true
+BOARD_BOOT_HEADER_VERSION := 2
+BOARD_DTB_OFFSET := 0x00f00000
+BOARD_RAMDISK_OFFSET := 0x01000000
+BOARD_SECOND_OFFSET := 0x00e00000
+BOARD_TAGS_OFFSET := 0x00ff8100
+TARGET_BOOTLOADER_IS_2ND := true
+BOARD_MKBOOTIMG_ARGS = --kernel_offset $(BOARD_KERNEL_OFFSET) --second_offset $(BOARD_SECOND_OFFSET) --ramdisk_offset $(BOARD_RAMDISK_OFFSET) --tags_offset $(BOARD_TAGS_OFFSET) --dtb_offset $(BOARD_DTB_OFFSET) --header_version $(BOARD_BOOT_HEADER_VERSION)
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)

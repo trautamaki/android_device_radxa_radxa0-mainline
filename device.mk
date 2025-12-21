@@ -24,10 +24,13 @@ TARGET_SCREEN_HEIGHT := 1080
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+PRODUCT_BUILD_VENDOR_BOOT_IMAGE := false
+
 # Init
 PRODUCT_PACKAGES += \
     fstab.radxa0 \
-    fstab.radxa0.ramdisk
+    fstab.radxa0.ramdisk \
+    fstab.radxa0.vendor_ramdisk
 
 PRODUCT_PACKAGES += \
     init.radxa0.rc
