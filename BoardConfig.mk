@@ -31,6 +31,9 @@ TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_VARIANT := generic
 TARGET_CPU_VARIANT_RUNTIME := cortex-a53
+
+# DTB
+TARGET_DTB_NAME := meson-g12a-radxa-zero
  
 # Temp
 TARGET_SUPPORTS_64_BIT_APPS := true
