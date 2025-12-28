@@ -60,6 +60,7 @@ BOARD_KERNEL_CMDLINE += androidboot.first_stage_console=2
 BOARD_KERNEL_CMDLINE += androidboot.console=ttyAML0
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_CMDLINE += androidboot.dtbo_idx=0 hdr_policy=1 otg_device=1
+BOARD_KERNEL_CMDLINE += blkdevparts=mmcblk1:8M@36M(logo),64M(recovery),8M(misc),8M(dtbo),8M(cri_data),16M(param),64M(boot),2M(frp),6M(rsv),16M(metadata),2M(vbmeta),32M(tee),1988M(super),800M(cache),-(data)
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_OFFSET := 0x00008000
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
